@@ -16,6 +16,8 @@ Explanation**: The subarray [4,3] has the minimal length under the problem const
 
 We can use the Two Pointers approach to solve this question. The two pointers, start and end, will be used to keep track of the start index and the end index of the current subarray, respectively. And we can move the start index of the current subarray as soon as we know that no better could be done with this index as the start index. This will be optimal in keeping the sum of the current subarray greater than or equal to the target while maintaining the lowest size possible.
 
+## Algorithm
+
 - Initialize **left** pointer to 0 and **sum** to 0
 - Iterate over the **nums**:
   - Add **nums[i]** to **sum**
