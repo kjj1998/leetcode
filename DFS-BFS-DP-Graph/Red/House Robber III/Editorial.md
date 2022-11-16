@@ -1,5 +1,23 @@
 # House Robber III
 
+## Problem
+
+The thief has found himself a new place for his thievery again. There is only one entrance to this area, called ```root```.
+
+Besides the ```root```, each house has one and only one parent house. After a tour, the smart thief realized that all houses in this place form a binary tree. It will automatically contact the police if **two directly-linked houses were broken into on the same night**.
+
+Given the ```root``` of the binary tree, return *the maximum amount of money the thief can rob **without alerting the police***.
+
+## Example
+
+![Image](./rob1-tree.jpg)
+
+```java
+Input: root = [3,2,3,null,3,null,1]
+Output: 7
+Explanation: Maximum amount of money the thief can rob = 3 + 3 + 1 = 7.
+```
+
 ## Step I -- Think naively
 
 At first glance, the problem exhibits the feature of "optimal substructure": if we want to rob maximum amount of money from current binary tree (rooted at root), we surely hope that we can do the same to its left and right subtrees.
@@ -99,3 +117,8 @@ private int[] robSub(TreeNode root) {
     return res;
 }
 ```
+
+## Complexity
+
+Time: O(n) </br>
+Space: O(1)

@@ -23,7 +23,7 @@ The naive way would be to recursive go down each sub-tree and count the number o
 
 However, we can optimize further by using the property of a complete binary tree. where the number of nodes in a fully filled complete binary tree is 2^h^-1 where h is the height of the tree.
 
-So we start by recursively going down the left side of the left subtree and the right side of the right subtree until the right side is not null. If the left side is null, we have a fully filled complete binary tree and can easily compute the number of nodes. If not, we need to recursive go down both the left and right side and look for fully filled complete binary tree.
+So we start by recursively going down the left side of the left subtree and the right side of the right subtree until the right side is not null. If the left side is null, we have a fully filled complete binary tree and can easily compute the number of nodes (using **2^h^ - 1**). If not, we need to recursive go down both the left and right side and look for fully filled complete binary tree.
 
 ```java
     public int countNodes(TreeNode root) {

@@ -41,16 +41,16 @@ We can see that at the point of rotation, we can easily divde the arrays into tw
 
             if (nums[mid] == target) {
                 return mid;
-            } else if (nums[mid] >= nums[low]) {
-                if (target >= nums[low] && target < nums[mid]) {
+            } else if (nums[mid] >= nums[low]) {    // left half monotonically increasing
+                if (target >= nums[low] && target < nums[mid]) {    // target in left half
                     high = mid - 1;
-                } else {
+                } else {    // target in right half
                     low = mid + 1;
                 }
-            } else {
-                if (target <= nums[high] && target > nums[mid]) {
+            } else {    // right half monotonically increasing
+                if (target <= nums[high] && target > nums[mid]) {   // target in right half
                     low = mid + 1;
-                } else {
+                } else {    // target in left half
                     high = mid - 1;
                 }
             }

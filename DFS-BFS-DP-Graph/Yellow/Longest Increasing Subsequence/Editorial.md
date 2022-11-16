@@ -48,7 +48,7 @@ public int dfs(int[] nums, int index, int prevIndex, int[] memo) {
         return memo[prevIndex + 1];
     }
 
-    int skip = dfs(nums, index+1, prevIndex, memo);
+    int skip = dfs(nums, index+1, prevIndex, memo); // no change to previous index when skipping
     int include = 0;
     if (prevIndex == -1 || nums[index] > nums[prevIndex]) {
         include = dfs(nums, index + 1, index, memo) + 1;
