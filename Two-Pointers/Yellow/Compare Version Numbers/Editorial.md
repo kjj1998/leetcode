@@ -26,7 +26,7 @@ Explanation: Ignoring leading zeroes, both "01" and "001" represent the same int
 
 We can use a Two-Pointers approach to solve this question.
 
-We have one pointer for ```version1``` and one pointer for ```version2```. We will sum up the values of all the digits in each version before they reach ```'.'```. Upon reaching ```'.'```, we compare the two summed up values and only proceed to sum the numbers after ```'.'``` if they are equal.
+We have one pointer for ```version1``` and one pointer for ```version2```. We will sum up the values of all the digits in each version before they reach ```'.'```. Upon reaching ```'.'```, we compare the two summed up values and only proceed to sum the numbers after ```'.'``` if they are equal. 
 
 When we are summing the numbers after ```'.'```, we first reset the sums for both versions to be ```0```. For the last group of digits where there isn't a ```'.'```, the summing will stop when the pointers reaches the last digit
 
